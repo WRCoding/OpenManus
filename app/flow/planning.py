@@ -149,6 +149,7 @@ class PlanningFlow(BaseFlow):
                     {
                         "name": key.upper(),
                         "description": self.agents[key].description,
+                        "available_tools": json.dumps(self.agents[key].available_tools.to_params()),
                     }
                 )
         if len(agents_description) > 1:

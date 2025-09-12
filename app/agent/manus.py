@@ -157,8 +157,8 @@ class Manus(ToolCallAgent):
                 await self.browser_context_helper.format_next_step_prompt()
             )
 
+        logger.info(f"self.next_step_prompt: {self.next_step_prompt}")
         result = await super().think()
-
         # Restore original prompt
         self.next_step_prompt = original_prompt
 
